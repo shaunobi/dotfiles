@@ -14,8 +14,15 @@ set shortmess=I
 set cmdheight=1
 set laststatus=2
 set statusline=%f%=%l/%L
-set nocompatible													"not compatible with vi
+
+" Not compatible with vi
+set nocompatible
+
 set grepprg=ack\ --nogroup\ --column\ $*
 set grepformat=%f:%l:%c:%m
-runtime macros/matchit.vim								"finds more matches, like HTML tags
 
+" Finds more matches, like HTML tags
+runtime macros/matchit.vim
+
+" Allow user to leave a buffer without saving. Still requires save on quit
+set hidden
